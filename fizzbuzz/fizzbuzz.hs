@@ -3,11 +3,7 @@ main = do
   mapM_ putStrLn $ map fizzbuzz numbers
 
 fizzbuzz :: Integer -> String
-fizzbuzz number = if (((mod number 5) == 0) && ((mod number 3) == 0)) then
-                    "FizzBuzz"
-                  else if ((mod number 5) == 0) then
-                    "Buzz"
-                  else if ((mod number 3) == 0) then
-                    "Fizz"
-                  else
-                    show number
+fizzbuzz number | ((mod number 15) == 0) = "FizzBuzz"
+                | ((mod number 5) == 0) = "Buzz"
+                | ((mod number 3) == 0) = "Fizz"
+                | otherwise = show number
