@@ -1,6 +1,4 @@
-main = do
-  let numbers = take 100 [1,2..]
-  mapM_ (putStrLn . fizzbuzz) numbers
+main = mapM_ (putStrLn . fizzbuzz) [1..100]
 
 fizzbuzz :: Integer -> String
 fizzbuzz number | number `by` 15 = "FizzBuzz"
